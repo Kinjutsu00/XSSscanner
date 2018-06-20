@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>XSS-SCANNER</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Just Test</a></li>
+							<li><a href="#two">learn more</a></li>
+							<li><a href="#three">contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>XSS Scanner</h1>
+							<p>Find out if your site has XSS vulnerabilities<br />
+							Secure your business!</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Go On</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+
+						<section>
+							<a href="#" class="image"><img src="images/seiii.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>First step</h2>
+									<p>This powerfull web application let you test your site against Reflected Cross Site Scripting attacks.
+									You can test your site or even others if you have an accord with the owners.</p>
+									<ul class="actions">
+										<li><a href="#two" class="button scrolly">Learn more</a></li>
+										<li><a href="#target" class="button scrolly">Select your target</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section id="target">
+							<a href="target" class="image"><img src="images/treee.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Insert the target's URL here:</h2>
+									<p>
+										<form action="/result" method="POST">
+										<input type="text" name="site"> <br>
+										<input type="submit" class="button" value="Scan">
+									 </form>
+									</p>
+
+								</div>
+							</div>
+						</section>
+
+
+
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>What's Cross Site Scripting?</h2>
+							<p>Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+
+An attacker can use XSS to send a malicious script to an unsuspecting user. The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page.</p>
+							<div class="features">
+								<style>
+																													u {
+																					  									cursor: pointer;
+																														}
+
+								</style>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>Reflected XSS</h3>
+									<p>Reflected attacks are those where the injected script is reflected off the web server... <u href="#ref" class="button scrolly small"> Read more</u></p>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>Stored XSS</h3>
+									<p>Stored attacks are those where the injected script is permanently stored on the target servers... <u href="#sto" class="button scrolly small"> Read more</u></p></p>
+								</section>
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>Xss prevention rules</h3>
+									<p> There are lot of prevention rules, check them all at <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#XSS_Prevention_Rules" target="_blank"> www.owasp.org </a> </p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>How XSS Scan works?</h3>
+									<p>The algorithm behind this web app is thought to check all Cross site Scripting... <u href="#scan" class="button scrolly small"> Read more</u></p></p>
+								</section>
+
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>If you hve some problem or question write us at <u>xssscan@support.com</u></p>
+
+						</div>
+					</section>
+
+					<section id="quattro" class="wrapper style3 fade-up">
+						<div class="inner">
+					<blockquote id="ref"><h2>Reflected XSS</h2>Reflected attacks are those where the injected script is reflected off the web server, such as in an error message, search result, or any other response that includes some or all of the input sent to the server as part of the request. Reflected attacks are delivered to victims via another route, such as in an e-mail message, or on some other web site. When a user is tricked into clicking on a malicious link, submitting a specially crafted form, or even just browsing to a malicious site, the injected code travels to the vulnerable web site, which reflects the attack back to the user’s browser. The browser then executes the code because it came from a "trusted" server.
+						Reflected XSS is also sometimes referred to as Non-Persistent or Type-II XSS.</blockquote>
+						<blockquote id="sto"><h2>Stored XSS</h2>Stored attacks are those where the injected script is permanently stored on the target servers, such as in a database, in a message forum, visitor log, comment field, etc. The victim then retrieves the malicious script from the server when it requests the stored information. Stored XSS is also sometimes referred to as Persistent or Type-I XSS.
+						</blockquote>
+						<blockquote id="scan"><h2>How XSS Scan works?</h2><p>XSS Scan works only with html dom and It is able to disclose Reflected Cross Site Scripting vulnerabilities.
+							 To guarantee this We find all the forms into the html's target site and We try ten different payload for each. This web app is written in java-script over nodeJs.
+							 </p>
+
+						</blockquote>
+					</div>
+					</section>
+
+			</div>
+
+
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>
