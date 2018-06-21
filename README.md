@@ -5,7 +5,7 @@ A messy and not optimized web application that just do his work	correctly and in
 This is a free software, do everythig you want, modify it, change it, share it, BUT:
 
 	Be conscious!	
-	<b>You can test a site only if you are the owner or if the owner formally asks you!<b>
+	You can test a site only if you are the owner or if the owner formally asks you!
 	I do not take any responsibility of your usage. 
 
 This app work only with a site that has form, a site without form will stall this app
