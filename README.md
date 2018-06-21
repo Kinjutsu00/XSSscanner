@@ -8,13 +8,19 @@ This is a free software, do everythig you want, modify it, change it, share it, 
 	You can test a site only if you are the owner or if the owner formally asks you!
 	I do not take any responsibility of your usage. 
 
-This app work only with a site that has form, a site without form will stall this app
+This app work only with a site that has form, a site without form will stall this app.
 
-First install nodeJS if you do not have it, and then:
+First install nodeJS if you do not already have it, and then run:
+	
 	$node server.js
-so just type in the browser:
+
+so just type on your browser:
+
 	localhost:5050
-and now you can copy the target link and get the result
+
+Now in front of you there is a very user-friendly and immediate interface, 
+you will understand immediately where you have to copy the target site URI. 
+
 
 This app only accept link with this form:
 	
@@ -30,3 +36,5 @@ This form with the "/" at the end will not work:
 
 
 If you have a really slow or busy network this application may not work.
+
+
