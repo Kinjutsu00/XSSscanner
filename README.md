@@ -20,6 +20,7 @@ This app only accept link with this form:
 	example.com
 
 This form with the "/" at the end will not work: 
-	{everything}.com/
+
+	{everything}.com/  
 
 If you have a really slow or busy network this may not work.
