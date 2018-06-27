@@ -40,8 +40,8 @@ If you have a really slow or busy network this application may not work.
 
 This is the web interface
 
-https://user-images.githubusercontent.com/40428406/41968859-f01e78d2-7a05-11e8-9deb-db788eed267a.png
+![screenshot from 2018-05-15 18-21-57](https://user-images.githubusercontent.com/40428406/41969055-8b86c310-7a06-11e8-9a1d-953bd30a1357.png)
 
 and then
 
-https://user-images.githubusercontent.com/40428406/41968872-f51d4462-7a05-11e8-95c1-ffd6804b21c9.png
+![screenshot from 2018-06-10 11-38-33](https://user-images.githubusercontent.com/40428406/41969038-807bed1a-7a06-11e8-9ca7-bb5d31f623be.png)
