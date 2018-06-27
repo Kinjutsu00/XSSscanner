@@ -38,3 +38,10 @@ This form with the "/" at the end will not work:
 If you have a really slow or busy network this application may not work.
 
 
+This is the web interface
+
+https://user-images.githubusercontent.com/40428406/41968859-f01e78d2-7a05-11e8-9deb-db788eed267a.png
+
+and then
+
+https://user-images.githubusercontent.com/40428406/41968872-f51d4462-7a05-11e8-95c1-ffd6804b21c9.png
