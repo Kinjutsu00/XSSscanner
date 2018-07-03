@@ -50,12 +50,12 @@ app.post('/result', function(request, response){
 
     var fs = require('fs');
 
-    function finalrequest(gag ,array, metodo, action, targetSite, formName){
+    function finalrequest(gag ,array, metodo, action, targetSite, formName){ 
                             var request = require("request");
-
+                            
                             var parametri;
 
-                              if(metodo=='GET' || metodo=='GET'){
+                              if(metodo=='GET' || metodo=='GET'){ 
 
                                     for(var y=0; y<array.length; y++){
                                       if(y==0){
@@ -77,7 +77,7 @@ app.post('/result', function(request, response){
                                           }
                                           else{
                                             console.log(metodo+"    http://" + targetSite + parametri);
-
+                                            
                                             setTimeout(function(){
                                             trova(gag, metodo, action ,targetSite, parametri, body, formName);
                                             },5000);
@@ -91,7 +91,7 @@ app.post('/result', function(request, response){
                                               }
                                               else{
                                             console.log(metodo+"    http://" + targetSite + action + parametri);
-
+                                            
                                             setTimeout(function(){
                                             trova(gag, metodo, action ,targetSite, parametri, body, formName);
                                           },7000);
@@ -100,10 +100,10 @@ app.post('/result', function(request, response){
                                     }
                               }
                               else{
-                                      if(metodo=='POST' || metodo=='post'){
+                                      if(metodo=='POST' || metodo=='post'){ 
                                                           parametri = array[0]+"=";
                                                       for(var y=1; y<array.length; y++){
-                                                          if(y%2==0){
+                                                          if(y%2==0){ 
                                                               parametri=parametri+"&"+array[y]+"=";
                                                           }
                                                           else{
@@ -188,6 +188,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
         trova(gag, metodo, action ,targetSite, parametri, body, formName);
       },7000);
 
+
                                                       }
                                       }
                                       else{
@@ -198,9 +199,9 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
 
         function trova(gag, metodo, action, targetSite, parametri, body, formName){
 
-          var what=0;
+          var what=0; 
 
-
+          
           try {
 
           if(body.indexOf("<script>alert(\"patchThis\")</script>")>=0){
@@ -244,7 +245,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                               console.log("TARGET NON VULNERABILE");
 
                               if (fs.existsSync("sendthis.txt")) {
-                                        //do nothing
+
                                   }
                                   else{
                                     setTimeout(function(){
@@ -262,7 +263,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                               return console.error(err);
                                            }
 
-                                           console.log("Data written successfully! NO VULNERABL");
+                                           console.log("Data written successfully! NO VULNERABL"); 
 
                                 });
                               }
@@ -278,7 +279,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
             }
           }
 
-        }
+        }//error
         catch(err) {
                     console.log("risposta del server non fornita");
         }
@@ -290,21 +291,21 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
 
 
                                                console.log("Going to open file!");
-                                                fs.open('sendthis.txt', 'a+', function(err, fd) {
+                                                fs.open('sendthis.txt', 'a+', function(err, fd) { 
                                                      if (err) {
                                                         return console.error(err);
                                                      }
                                                     console.log("File opened successfully!");
 
-
+                                                   
                                                                   var controllo = 0;
 
-
+                                                        
                                                                                       for(var t=0; t<parametri.length; t=t+1){
                                                                                         parametri=parametri.replace("<","&lt");
                                                                                         parametri=parametri.replace(">","&gt");
                                                                                       }
-
+                                                                                      /////////////////////////////////////////////////////
                                                                                 if (metodo=='GET' || metodo=='get') {
 
                                                                                       testo= testo +" <b><center>"+ gag + "</center></b> <br> The target site <b style=\"color:#FFA500\">"+ targetSite + "</b> is vulnerable. <br> <br> The vulnerable form's name is: <b>"+formName+"</b><br>Here is the PAYLOAD: <b style=\"color:#FFFF00;\">" + parametri + "</b><br><br>Here is the full URL: <b style=\"color:#FFA500\">" + targetSite +"</b>" + "<b style=\"color:#FFFF00;\">"+parametri+"</b>";
@@ -312,7 +313,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                                                                       if(action!='' && action!=' '){
                                                                                         testo= testo+ "<br>Action: <b>" + action + "</b>";
                                                                                       }
-                                                                                      testo=testo+ "<br>Patch this vulnerabiity now! <a href=\"https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#XSS_Prevention_Rules\" target=\"_blank\"><u><b>Learn More</b></u></a>";
+                                                                                      testo=testo+ "<br>Patch this vulnerabiity now! <a href=\"https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#XSS_Prevention_Rules\" target=\"_blank\"><u><b>Learn More</b></u></a>"; 
                                                                                 }
                                                                                 else{
                                                                                       testo= testo +" <b><center>#"+ gag + "</center></b> The target site <b style=\"color:#FFA500\">"+ targetSite + "</b> is vulnerable. <br> <br> <br>The vulnerable form's name is: <b>"+formName+"</b><br>Here is the PAYLOAD: <b style=\"color:#FFFF00;\">" + parametri ;
@@ -320,37 +321,37 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                                                                       if(action!='' && action!=' '){
                                                                                         testo= testo+ "<br>Action: <b>" + action + "</b>";
                                                                                       }
-                                                                                      testo=testo+ "<br>Patch this vulnerabiity now! <a href=\"https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#XSS_Prevention_Rules\" target=\"_blank\"><u><b>Learn More</b><u></a>";
+                                                                                      testo=testo+ "<br>Patch this vulnerabiity now! <a href=\"https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet#XSS_Prevention_Rules\" target=\"_blank\"><u><b>Learn More</b><u></a>"; 
 
                                                                                       }
                                                                                       var testoo=testo;
                                                                                       const fs = require('fs');
-                                                                                      fs.readFile('sendthis.txt', {encoding: 'utf8'}, function(err,data){
+                                                                                      fs.readFile('sendthis.txt', {encoding: 'utf8'}, function(err,data){///////////////////////
+                                                                                          if(err){console.log("error " + err);}
                                                                                           else{
                                                                                       controllo=data.search(gag);
                                                                                       if(controllo == -1){
-                                                                                      fs.appendFile('sendthis.txt', testoo, function (err) {
+                                                                                      fs.appendFile('sendthis.txt', testoo, function (err) { 
                                                                                         if (err) throw err;
                                                                                         console.log('Saved!');
                                                                                       });
                                                                                     }
-
+                                                                                   
                                                                               }
-                                                                                    });
+                                                                                    }); //reading
 
                                                                                     fs.closeSync(fd);
-                                                                                  });
+                                                                                  });//opening
 
 
 
                     }
-
+ 
 
         }
 
     function prima(callback){
           var child_process = require('child_process');
-
 
 
           function runCmd(cmd)
@@ -395,7 +396,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                                     return console.error(err);
                                                  }
 
-                                                 console.log("Data written successfully! ERROR");
+                                                 console.log("Data written successfully! ERROR"); 
 
                                           });
                     }
@@ -410,9 +411,9 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                     }
                 });
 
-          }
+          }//
 
-
+       
         function seconda(targetSite){
 
           var child_process = require('child_process');
@@ -447,23 +448,24 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
               var xss=["<script> alert(\"patchThis\") </script>"];
               xss.pop();
               xss.push("<script>alert(\"patchThis\")</script>");
-              xss.push("\"></script><script>alert(\"patchThis\");\"");
-              xss.push("<img src=\"javascript:alert(\'patchThis\')\"></img>");
-              xss.push("\' onerror=\'alert(\"patchThis\")\'>");
+              xss.push("\"></script><script>alert(\"patchThis\");\"");                                    
+              xss.push("<img src=\"javascript:alert(\'patchThis\')\"></img>");                             
+              xss.push("\' onerror=\'alert(\"patchThis\")\'>");                                            
 
 
 
               xss.push("<IMG SRC=j&#X41vascript:alert(\'patchThis\')>");
-              xss.push("<b onmouseover=alert(\'patchThis\')>click me!</b>");
+              xss.push("<b onmouseover=alert(\'patchThis\')>click me!</b>");                                
               xss.push("<script type=\"text/vbscript\">alert(\'patchThis\')</script>");
-              xss.push("%3cscript%3ealert(\"patchThis\")%3c/script%3e");
+              xss.push("%3cscript%3ealert(\"patchThis\")%3c/script%3e");    
           var array=['array'];
           array.pop();
           for (var x in resultObj) {
             console.log('SIAMO NEL ' + x + ' ||| metodo: ' + resultObj[x]._metodo + ' ||| action: ' + resultObj[x]._action );
               for (var y in resultObj[x]) {
                           if(resultObj[x][y].hasOwnProperty('valore') && resultObj[x][y].name_field!=""){
-                            console.log(' |||  tipo campo: ' + resultObj[x][y].tipo_campo + ' ||| ' + y + '-> ' + " ||| nome: " + resultObj[x][y].name_field + " |||  valore: " + resultObj[x][y].valore);
+                           
+                              console.log(' |||  tipo campo: ' + resultObj[x][y].tipo_campo + ' ||| ' + y + '-> ' + " ||| nome: " + resultObj[x][y].name_field + " |||  valore: " + resultObj[x][y].valore);
                                     array.push(resultObj[x][y].name_field);
                                     array.push(resultObj[x][y].valore);
                             }
@@ -474,7 +476,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                   var formName=0;
                   var save;
                   var gag=1;
-                       for( var odd=1; odd<array.length; gag++, odd=odd+2){
+                       for( var odd=1; odd<array.length; gag++, odd=odd+2){ 
                             var save; gag=odd;
                             save=array[odd];
                             formName=array[odd-1];
@@ -500,12 +502,12 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                   }
 
                                     if(xss[ind]=="<script> alert(\"patchThis\") </script>"){ gag=gag+"#";
-                                      finalrequest(gag, array, resultObj[x]._metodo, resultObj[x]._action, targetSite, formName);
+                                      finalrequest(gag, array, resultObj[x]._metodo, resultObj[x]._action, targetSite, formName); 
                                       setTimeout(function(){
                                       },100);
                                     }
                                     else{gag="#"+gag+"#";
-                                      finalrequest(gag, array, resultObj[x]._metodo, resultObj[x]._action, targetSite, formName);
+                                      finalrequest(gag, array, resultObj[x]._metodo, resultObj[x]._action, targetSite, formName); 
                                     }
                             }
                             array[odd]=save;
@@ -521,10 +523,15 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
           }
 
 
-        }
+
+
+         
+
+        } //
+
         prima(seconda);
 
-
+        // 
         setTimeout(function(){
         controlloDoppioni(); },55000);
         function controlloDoppioni(){
@@ -550,7 +557,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                        doppione=-10;
                                        uno="";
                                        due="";
-                                       data=fs.readFileSync('sendthis.txt');
+                                       data=fs.readFileSync('sendthis.txt');///////////////////////
 
 
                                                    doppione=data.indexOf(gag);
@@ -571,7 +578,7 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
                                                           data3=data1+data2;
                                                                saved=fs.writeFileSync("sendthis.txt",data3, 'utf8');
 
-                                                                      console.log("doppioni rimossi "+ saved);
+                                                                      console.log("doppioni rimossi "+ saved); 
 
 
 
@@ -583,9 +590,9 @@ console.log(metodo+"    http://" + targetSite + action + "  PARAMETRI: " + param
 
 
 
-                      }
-                }
-          }
+                      }//for 
+                }//for
+          }//
 
 
 
