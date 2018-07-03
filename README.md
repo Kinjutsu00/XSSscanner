@@ -31,7 +31,7 @@ This app only accept link with this form:
 
 This form with the "/" at the end will not work: 
 
-	This is no good:   {everything}.com/    
+	This is not good:   {everything}.com/    
 
 
 
