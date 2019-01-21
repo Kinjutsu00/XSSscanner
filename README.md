@@ -12,7 +12,7 @@ This app work only with a site that has form, a site without form will stall thi
 
 First install nodeJS if you do not already have it, and then run:
 	
-	$node server.js
+	:~$ node server.js
 
 so just type on your browser:
 
@@ -45,3 +45,5 @@ This is the web interface:
 and then in the same page:
 
 ![screenshot from 2018-06-10 11-38-33](https://user-images.githubusercontent.com/40428406/41969038-807bed1a-7a06-11e8-9ca7-bb5d31f623be.png)
+
+Note: You can try XSS on this application, in fact it does not check your input in the target form
