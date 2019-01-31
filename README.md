@@ -18,7 +18,7 @@ so just type on your browser:
 
 	localhost:5050
 
-Now in front of you there is a very user-friendly and immediate interface, 
+Now in front of you there is a very user-friendly and immediate interface (as you can see below), 
 you will understand immediately where you have to copy the target site URI. 
 
 
