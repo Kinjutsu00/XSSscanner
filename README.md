@@ -39,15 +39,15 @@ If you have a really slow or busy network this application may not work.
 
 
 ## The Payloads used in the scan are:
--        <script>alert(\"patchThis\")</script>
--        \"></script><script>alert(\"patchThis\");\"
--        <img src=\"javascript:alert(\'patchThis\')\"></img>
--        \' onerror=\'alert(\"patchThis\")\'>
--        <img src=\"http://ineeexist.ent\" onerror=\"javascript:alert(\"patchThis\")\"/>
--        %3cscript%3ealert(\"patchThis\")%3c/script%3e
--        javascript:alert(\"patchThis\")
--        <b onmouseover=alert(\'patchThis\')>click me!</b>
--        <script type=\"text/vbscript\">alert(\'patchThis\')</script>
+-        <script>alert("patchThis")</script>
+-        "></script><script>alert("patchThis");"
+-        <img src="javascript:alert('patchThis')"></img>
+-        ' onerror='alert("patchThis")'>
+-        <img src="http://ineeexist.ent" onerror="javascript:alert("patchThis")"/>
+-        %3cscript%3ealert("patchThis")%3cscript%3e
+-        javascript:alert("patchThis")
+-        <b onmouseover=alert('patchThis')>click me!</b>
+-        <script type="text/vbscript">alert('patchThis')</script>
 
 
 ## Preview: 
