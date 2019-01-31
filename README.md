@@ -64,4 +64,4 @@ this is a result example, shown in another page:
 ![screenshot from 2018-06-10 14-46-31](https://user-images.githubusercontent.com/40428406/51487992-af09ae00-1da4-11e9-8398-d26f9c526c25.png)
 
 
-Note: You can try XSS on this application, in fact it does not check your input typed the target form
+PS: You can try XSS on this application, in fact (for my will) it does not check your input typed the target form
