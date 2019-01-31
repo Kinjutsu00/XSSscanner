@@ -38,7 +38,7 @@ This form with the "/" at the end will not work:
 If you have a really slow or busy network this application may not work.
 
 
-# The Payload it tests are:
+## The Payloads used in the scan are:
 -        <script>alert(\"patchThis\")</script>
 -        \"></script><script>alert(\"patchThis\");\"
 -        <img src=\"javascript:alert(\'patchThis\')\"></img>
